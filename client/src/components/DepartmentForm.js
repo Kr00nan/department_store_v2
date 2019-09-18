@@ -3,7 +3,7 @@ import {Form, Header} from 'semantic-ui-react';
 import axios from 'axios';
 
 class DepartmentForm extends React.Component {
-  defaultValues = {name: '', price: '', description: ''};
+  defaultValues = {name: ''};
   state = {...this.defaultValues};
 
   handleSubmit = (e) => {
@@ -22,7 +22,7 @@ class DepartmentForm extends React.Component {
   };
 
   render() {
-    const {name, price, description, department} = this.state;
+    const {name} = this.state;
 
     return (
       <div>
@@ -37,32 +37,8 @@ class DepartmentForm extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <Form.Input 
-              label='Description'
-              name='description'
-              placeholder='Description'
-              value={description}
-              onChange={this.handleChange}
-              />
           </Form.Group>
-          <Form.Group widths='equal'>
-            <Form.Input 
-              label='Price'
-              name='price'
-              placeholder='Price'
-              value={price}
-              onChange={this.handleChange}
-              required
-            />
-            <Form.Input 
-              label='Department'
-              name='department'
-              placeholder='Department'
-              value={department}
-              onChange={this.handleChange}
-              required
-            />
-          </Form.Group>
+          <Form.Button onClick={this.props.history.goBack} color='black'>Go Back</Form.Button>
           <Form.Button color='blue'>Submit</Form.Button>
         </Form>
       </div>
