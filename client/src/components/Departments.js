@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {Card, Header} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 class Departments extends React.Component {
   state = {departments: []};
@@ -23,7 +24,7 @@ class Departments extends React.Component {
     if (departments.length <= 0)
       return <h2>No Departments</h2>
     return departments.map( department => (
-      <Card>
+      <Card as={Link} to={`/api/departments/${department.id}/items`}>
         <Card.Content>
           <Card.Header>{department.name}</Card.Header>
         </Card.Content>
