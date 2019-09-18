@@ -26,9 +26,6 @@ class DepartmentView extends React.Component {
       <div>
          <Segment>
            <Header as='h1'>{name}</Header>
-           {/* <Header as='h3'>{department}</Header> */}
-           {/* <Header as='h5' color='grey'>${price}</Header> */}
-           {/* <p>{description}</p> */}
          </Segment>
          <br />
          <Button onClick={this.props.history.goBack} color='black'>Go Back</Button>

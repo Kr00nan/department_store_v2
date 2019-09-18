@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Departments from './components/Departments';
 import DepartmentForm from './components/DepartmentForm';
 import DepartmentView from './components/DepartmentView';
+import DepartmentItemsView from './components/DepartmentItemsView';
 import {Container} from 'semantic-ui-react';
 import {Route, Switch} from 'react-router-dom';
 
@@ -20,6 +21,7 @@ const App = () => (
         <Route exact path='/departments/new' component={DepartmentForm} />
         <Route exact path='/departments/:id' component={DepartmentView} />
         <Route exact path='/departments/:id/edit' component={DepartmentForm} />
+        <Route exact path='/departments/:department_id/items' component={DepartmentItemsView} />
         <Route component={NoMatch} />
       </Switch>
     </Container>
