@@ -24,7 +24,7 @@ class Departments extends React.Component {
     if (departments.length <= 0)
       return <h2>No Departments</h2>
     return departments.map( department => (
-      <Card as={Link} to={`/api/departments/${department.id}/items`}>
+      <Card as={Link} to={`/api/departments/${department.id}/items`} key={department.id}>
         <Card.Content>
           <Card.Header>{department.name}</Card.Header>
         </Card.Content>
