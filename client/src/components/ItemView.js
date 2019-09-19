@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {Segment, Header, Button} from 'semantic-ui-react';
 
@@ -7,7 +7,7 @@ class ItemView extends React.Component {
   state = {item: {}};
 
   componentDidMount() {
-    Axios.get(`/api/departments/${this.props.match.params.department_id}/items/${this.props.match.params.id}`)
+    axios.get(`/api/departments/${this.props.match.params.department_id}/items/${this.props.match.params.id}`)
     .then( res => {
       this.setState({item: res.data});
     })

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { Segment, Header, Button, Card } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
+import {Button, Card} from 'semantic-ui-react';
 
 class DepartmentItemsView extends React.Component {
   state = { items: [] };
