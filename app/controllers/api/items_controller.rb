@@ -11,6 +11,7 @@ class Api::ItemsController < ApplicationController
   end
 
   def create
+    @item = @department.items.new(item_params)
   end
 
   def update
