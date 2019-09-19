@@ -32,6 +32,8 @@ class DepartmentItemsView extends React.Component {
         </Card.Content>
         <Card.Content extra>
           <Button color='black' as={Link} to={`/departments/${item.department_id}/items/${item.id}`}>View</Button>
+          <Button color='blue'>Edit</Button>
+          <Button color='red'>Delete</Button>
         </Card.Content>
       </Card>
     ))
